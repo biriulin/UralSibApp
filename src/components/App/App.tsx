@@ -5,7 +5,7 @@ import React from 'react';
 import {Ghost} from '@gravity-ui/icons';
 import {AsideHeader} from '@gravity-ui/navigation';
 
-import {Wrapper} from '../Wrapper';
+import {Wrapper} from './components/Wrapper';
 
 interface AppProps {
     children: React.ReactNode;
@@ -13,7 +13,7 @@ interface AppProps {
 export const App: React.FC<AppProps> = ({children}) => {
     return (
         <AsideHeader
-            logo={{icon: Ghost, text: 'nextjs-example'}}
+            logo={{icon: Ghost, text: 'nextjs-example', href: '/'}}
             compact={true}
             hideCollapseButton={true}
             renderContent={() => <Wrapper>{children}</Wrapper>}

@@ -1,5 +1,5 @@
-import {InfoButtons} from '../components/InfoButtons';
+import {Posts} from '@/pages/Posts';
 
 export default function Home() {
-    return <InfoButtons />;
+    return <Posts />;
 }

@@ -1,0 +1,18 @@
+$block: '.post-card-wrapper';
+
+#{$block} {
+    margin-bottom: 20px;
+    padding: 30px 16px;
+
+    &__link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        margin-top: 30px;
+    }
+
+    &__body {
+        display: block;
+        margin-top: 15px;
+    }
+}
