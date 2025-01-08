@@ -1,4 +1,4 @@
-import {PostPage} from '@/pages/Post';
+import {PostPage} from '@/components/Post';
 
 export default function Home() {
     return <PostPage />;
