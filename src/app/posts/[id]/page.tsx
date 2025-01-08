@@ -1,7 +1,7 @@
 import {PostPage} from '@/components/Post';
 
 export async function generateStaticParams() {
-  return [];
+    return [];
 }
 
 export default function Home() {
