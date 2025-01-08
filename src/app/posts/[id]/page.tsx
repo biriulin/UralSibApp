@@ -1,6 +1,8 @@
 import {PostPage} from '@/components/Post';
 
-export const dynamic = 'force-static';
+export async function generateStaticParams() {
+  return [];
+}
 
 export default function Home() {
     return <PostPage />;
