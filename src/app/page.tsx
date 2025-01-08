@@ -1,4 +1,4 @@
-import {Posts} from '@/pages/Posts';
+import {Posts} from '@/components/Posts';
 
 export default function Home() {
     return <Posts />;
