@@ -69,10 +69,16 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+      - name: Copy static files to dist
+        run: |
+          rm -rf dist
+          mkdir dist
+          cp -r .next/static dist/static
+          echo '<!DOCTYPE html><html><head><title>CSR App</title></head><body><div id="__next"></div><script src="/static/runtime/main.js"></script></body></html>' > dist/index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./dist
 
   # Deployment job
   deploy:

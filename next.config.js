@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: '/UralSibApp',
+    reactStrictMode: true,
+    experimental: {
+        appDir: true,
+    },
     webpack: (config) => {
         config.module.rules.push({
             test: /\.svg$/i,
